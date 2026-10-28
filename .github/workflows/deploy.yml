@@ -34,6 +34,8 @@ jobs:
 
       - name: Build React app
         working-directory: Front-end (React)
+        env:
+          VITE_API_URL: https://localhost:7238
         run: npm run build
 
       - name: Upload build
