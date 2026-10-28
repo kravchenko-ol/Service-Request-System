@@ -84,8 +84,8 @@ export default function Acc () {
                             <img 
                                 src={
                                     (edit ? editAcc.sex?.toLowerCase() : user?.sex?.toLowerCase()) === 'men'
-                                        ? '/img/free-icon-user-219970512.png'
-                                        : '/img/free-icon-user-219971512.png'
+                                        ? `${import.meta.env.BASE_URL}/img/free-icon-user-219970512.png`
+                                        : `${import.meta.env.BASE_URL}/img/free-icon-user-219971512.png`
                                 } 
                                 alt="Photo user" 
                                 width={250}

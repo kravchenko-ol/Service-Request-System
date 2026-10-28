@@ -29,7 +29,7 @@ export default function ShowRequest() {
                         className='open'
                         onClick={() => setCloseMenu('')}
                     >
-                        <img src={them === 'light' ? '/img/double-right-black.png' : '/img/double-right-ligtht.png'} alt="" width={16}/>
+                        <img src={them === 'light' ? `${import.meta.env.BASE_URL}/img/double-right-black.png` : `${import.meta.env.BASE_URL}/img/double-right-ligtht.png`} alt="" width={16}/>
                     </div>
                 :
                     <>
@@ -38,14 +38,14 @@ export default function ShowRequest() {
                                 className='closeBlock'
                                 onClick={() => setCloseMenu('close')}
                             >
-                                <img src={them === 'light' ? '/img/menu-black.png' : '/img/menu-ligtht.png'} alt="" width={20}/>
+                                <img src={them === 'light' ? `${import.meta.env.BASE_URL}/img/menu-black.png` : `${import.meta.env.BASE_URL}/img/menu-ligtht.png`} alt="" width={20}/>
                             </div>
                             <h4>My Requests</h4>
                         </div>
 
                         <div className='searchReq'>
                             <div className='divInpt'>
-                                <img src='/img/icons8-search-52.png' alt="" width={16}/>
+                                <img src={`${import.meta.env.BASE_URL}/img/icons8-search-52.png`} alt="" width={16}/>
                                 <input 
                                     type="text" 
                                     placeholder='Search Requests'
@@ -84,7 +84,10 @@ export default function ShowRequest() {
                                                             </div>
                                                             <div className='eyeCheck'>
                                                                 <p>{request.comments.length}</p>
-                                                                <img src={them === 'light' ? '/img/eye-black.png' : '/img/eye-ligth.png'} alt="" width={14}/>
+                                                                <img
+                                                                    src=
+                                                                    {them === 'light' ? `${import.meta.env.BASE_URL}/img/eye-black.png` :
+                                                                        `${import.meta.env.BASE_URL}/img/eye-ligth.png`} alt="" width={14} />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -123,7 +126,7 @@ export default function ShowRequest() {
                                                                 </div>
                                                                 <div className='eyeCheck'>
                                                                     <p>{request.comments.length}</p>
-                                                                    <img src={them === 'light' ? '/img/eye-black.png' : '/img/eye-ligth.png'} alt="" width={14}/>
+                                                                    <img src={them === 'light' ? `${import.meta.env.BASE_URL}/img/eye-black.png` : `${import.meta.env.BASE_URL}/img/eye-ligth.png`} alt="" width={14}/>
                                                                 </div>
                                                             </div>
                                                         </div>

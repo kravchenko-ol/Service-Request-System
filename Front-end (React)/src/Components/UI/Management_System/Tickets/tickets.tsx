@@ -123,7 +123,7 @@ export default function Tickets() {
 
             <div className='head'>
                 <div className='titleIcon'>
-                    <img src="/img/ticket.png" alt="" width={24}/>
+                    <img src={`${import.meta.env.BASE_URL}/img/ticket.png`} alt="" width={24}/>
                     <h3>Tickets</h3>
                 </div>
                 <div>
@@ -150,7 +150,7 @@ export default function Tickets() {
                 </div>
                 <div className='filter'>
                     <img 
-                        src="/img/filtration.png" 
+                        src={`${import.meta.env.BASE_URL}/img/filtration.png` }
                         alt="" 
                         width={16}
                         onClick={() => setFilter(true)}
@@ -268,14 +268,14 @@ export default function Tickets() {
                                             }}
                                         >
                                             <div className='ticketHead'>
-                                                <img src={iconTickets[iconKey] ?? '/img/bookmark.png'} alt="" width={24}/>
+                                                <img src={iconTickets[iconKey] ?? `${import.meta.env.BASE_URL}/img/bookmark.png`} alt="" width={24}/>
                                                 <p>{ticket.name}</p>
                                                 <p className='size'>{ticket.requests.length}</p>
                                                 <button 
                                                     className='deleteTick'
                                                     onClick={() => {deleteTickets(ticket.id)}}
                                                 >
-                                                    <img src="/public/img/delete.png" alt="" width={24}/>
+                                                    <img src={`${import.meta.env.BASE_URL}/img/delete.png`} alt="" width={24}/>
                                                 </button>
                                             </div>
 
@@ -296,17 +296,17 @@ export default function Tickets() {
 
                                                                 <div className='reqHead'>
                                                                     <div className='idReq'>
-                                                                        <img src="/img/connect.png" alt="" width={12}/>
+                                                                        <img src={`${import.meta.env.BASE_URL}/img/connect.png`} alt="" width={12}/>
                                                                         <p>{request.id}</p>
                                                                         <span>·</span>
                                                                     </div>
                                                                     <div className='reqUser'>
-                                                                        <img src="/public/img/user.png" alt="" width={12}/>
+                                                                        <img src={`${import.meta.env.BASE_URL}/public/img/user.png`} alt="" width={12}/>
                                                                         <p>{request.author.name}</p>
                                                                     </div>
 
                                                                     <div className='iconMore'>
-                                                                        <img src="/public/img/more.png" alt="" width={16}/>
+                                                                        <img src={`${import.meta.env.BASE_URL}/public/img/more.png`} alt="" width={16}/>
 
                                                                         <div className='divMore'>
                                                                             <div 

@@ -25,7 +25,7 @@ export default function ArchRequests() {
                     <h3>{request?.title}</h3>
 
                     <div className='idCreate'>
-                        <img src={them === 'light' ? '/img/bug-black.png' : '/img/bug-white.png'} alt="" width={20}/>
+                        <img src={them === 'light' ? `${import.meta.env.BASE_URL}/img/bug-black.png` : `${import.meta.env.BASE_URL}/img/bug-white.png`} alt="" width={20}/>
                         <p>
                             {request?.id} |
                             Created {request?.createAt}
@@ -51,7 +51,7 @@ export default function ArchRequests() {
                     </div>
 
                     <div className='view'>
-                        <img src={them === 'light' ? '/img/eye-black.png' : '/img/eye-ligth.png'} alt="" width={16}/>
+                        <img src={them === 'light' ? `${import.meta.env.BASE_URL}/img/eye-black.png` : `${import.meta.env.BASE_URL}/img/eye-ligth.png`} alt="" width={16}/>
                         <p>{request?.comments.length}</p>
                     </div>
                 </div>
@@ -62,7 +62,7 @@ export default function ArchRequests() {
                 <div className='descrReq'>
                     <div className='imgDiv'>
                         <img 
-                            src={session?.sess?.sex === 'men' ? '/img/free-icon-user-219970.png' : '/img/free-icon-user-219971.png'} 
+                            src={session?.sess?.sex === 'men' ? `${import.meta.env.BASE_URL}/img/free-icon-user-219970.png` : `${import.meta.env.BASE_URL}/img/free-icon-user-219971.png`} 
                             alt="" 
                             width={24} 
                         />
@@ -84,7 +84,7 @@ export default function ArchRequests() {
                                             <p className='createComment'>{comment.createAt}</p>
                                             <h5>{comment.author.name}</h5>
                                             <img 
-                                                src="/public/img/free-icon-user-219970.png" 
+                                                src={`${import.meta.env.BASE_URL}/img/free-icon-user-219970.png`} 
                                                 alt="" 
                                                 width={25} 
                                             />

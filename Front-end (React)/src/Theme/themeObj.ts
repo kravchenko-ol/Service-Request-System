@@ -1,8 +1,8 @@
 export const iconsCategory = {
-    web: '/img/web.png',
-    mobile: '/img/iphone.png',
-    pc: '/img/pc.png',
-    software: '/img/software.png'
+    web: `${import.meta.env.BASE_URL}/img/web.png`,
+    mobile: `${import.meta.env.BASE_URL}/img/iphone.png`,
+    pc: `${import.meta.env.BASE_URL}/img/pc.png`,
+    software: `${import.meta.env.BASE_URL}/img/software.png`
 };
 
 export const colorPrior = {
@@ -19,11 +19,11 @@ export const themeStatus = {
 };
 
 export const iconTickets = {
-    new: '/img/new.png',
-    inprogress: '/img/progress.png',
-    waiting: '/img/waiting.png',
-    done: '/img/done.png',
-    pc: '/img/pc.png',
-    mobile: '/img/iphone.png',
-    software: '/img/software.png'
+    new: `${import.meta.env.BASE_URL}/img/new.png`,
+    inprogress: `${import.meta.env.BASE_URL}/img/progress.png`,
+    waiting: `${import.meta.env.BASE_URL}/img/waiting.png`,
+    done: `${import.meta.env.BASE_URL}/img/done.png`,
+    pc: `${import.meta.env.BASE_URL}/img/pc.png`,
+    mobile: `${import.meta.env.BASE_URL}/img/iphone.png`,
+    software: `${import.meta.env.BASE_URL}/img/software.png`
 };
