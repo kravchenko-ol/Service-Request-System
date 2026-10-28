@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react';
 import './registration.css';
 import { AnimContext } from '../../../../Animation/animLogReg';
-import { SubmitBtn } from '../../Components/Buttons/buttons';
+import { BtnOnly, SubmitBtn } from '../../Components/Buttons/buttons';
 import type { IRegistrationData } from '../../../../Types/type';
 import { upperCaseLetters, specialSymbols } from '../inspectArray';
 import { useNavigate } from 'react-router';
@@ -326,7 +326,8 @@ export default function Registration () {
                 </div>
             
                 <div className='formBtn'>
-                    <SubmitBtn text='Registrtion'/>
+                    <SubmitBtn text='Registrtion' />
+                    <BtnOnly text='Registration Operator?' click={() => navigate('/registrationOperations')}/>
                 </div>
             </form>
         </div>
