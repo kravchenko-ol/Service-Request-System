@@ -80,7 +80,7 @@ export default function RegistrtionOperations() {
                 throw new Error(`Error ${response.status}`);
             }
 
-            await navigate('/login');
+            await navigate('/');
 
         } catch (error) {
             console.log(error);
