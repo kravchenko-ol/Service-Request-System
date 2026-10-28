@@ -19,7 +19,9 @@ export function LeftMenu() {
                             children={({ isActive }) => (
                                 <>
                                     <img src={
-                                            isActive ? '/img/archiveY-96.png' : them === 'light' ? '/img/archiveB-96.png' : '/img/archiveW.png'} width={25} 
+                                        isActive ? `${import.meta.env.BASE_URL}/img/archiveY-96.png` :
+                                            them === 'light' ? `${import.meta.env.BASE_URL}/img/archiveB-96.png` :
+                                                `${import.meta.env.BASE_URL}/img/archiveW.png`} width={25} 
                                     />
                                 </>
                             )}
@@ -29,7 +31,9 @@ export function LeftMenu() {
                             children={({ isActive }) => (
                                 <>
                                     <img src={
-                                            isActive ? '/img/plusY-96.png' : them === 'light' ? '/img/plusB-96.png' : '/img/plusW.png'} width={25} 
+                                        isActive ? `${import.meta.env.BASE_URL}/img/plusY-96.png` :
+                                            them === 'light' ? `${import.meta.env.BASE_URL}/img/plusB-96.png`
+                                                : `${import.meta.env.BASE_URL}/img/plusW.png`} width={25} 
                                     />
                                 </>
                             )}
@@ -39,7 +43,9 @@ export function LeftMenu() {
                             children={({ isActive }) => (
                                 <>
                                     <img src={
-                                            isActive ? '/img/settingY-96.png' : them === 'light' ? '/img/settingB-96.png' : '/img/settingW.png'} width={25} 
+                                        isActive ? `${import.meta.env.BASE_URL}/img/settingY-96.png` :
+                                            them === 'light' ? `${import.meta.env.BASE_URL}/img/settingB-96.png` :
+                                                `${import.meta.env.BASE_URL}/img/settingW.png`} width={25} 
                                     />
                                 </>
                             )}
@@ -75,7 +81,7 @@ export function LeftMenuOp() {
                     <>
                         <div className='headOp'>
                             <div className='iconDiv'>
-                                <img src="/img/LogoBlack.png" alt="" width={48}/>
+                                <img src={`${import.meta.env.BASE_URL}/img/LogoBlack.png`} alt="" width={48}/>
                                 <h6>Service Desk Management</h6>
                             </div>
 
@@ -83,7 +89,7 @@ export function LeftMenuOp() {
                                 className='iconClose'
                                 onClick={() => setCloseMenu(true)}
                             >
-                                <img src="/img/icons8-left-2-100.png" alt="" width={24}/>
+                                <img src={`${import.meta.env.BASE_URL}/img/icons8-left-2-100.png`} alt="" width={24}/>
                             </div>
                         </div>
 
@@ -91,7 +97,7 @@ export function LeftMenuOp() {
                             <NavLink to={'/tickets'} end  className={'nav'} children={({isActive}) => (
                                 <div className={`navDiv ${isActive && 'active'}`}>
                                     <div className='tickIcon'>
-                                        <img src="/public/img/ticket.png" alt="" width={24}/>
+                                        <img src={`${import.meta.env.BASE_URL}/img/ticket.png`} alt="" width={24}/>
                                         <p>Tikets</p>
                                     </div>
                                         <p className='newReq'>
@@ -102,7 +108,7 @@ export function LeftMenuOp() {
                             
                             <NavLink to={'/analytics'} end className={'nav'}  children={({isActive}) => (
                                 <div className={`navDiv ${isActive && 'active'}`}>
-                                    <img src="/img/analytics.png" alt="" width={24}/>
+                                    <img src={`${import.meta.env.BASE_URL}/img/analytics.png`} alt="" width={24}/>
                                     <p>Analytics</p>
                                 </div>
                             )}/>
@@ -138,14 +144,14 @@ export function LeftMenuOp() {
                     <>
                         <div className='headOpClose'>
                             <div className='closeIconDiv'>
-                                <img src="/img/LogoBlack.png" alt="" width={24}/>
+                                <img src={`${import.meta.env.BASE_URL}/img/LogoBlack.png`} alt="" width={24}/>
                             </div>
 
                             <div 
                                 className='iconOpen'
                                 onClick={() => setCloseMenu(false)}
                             >
-                                <img src="/img/icons8-forward-arrow-100.png" alt="" width={18}/>
+                                <img src={`${import.meta.env.BASE_URL}/img/icons8-forward-arrow-100.png`} alt="" width={18}/>
                             </div>
                         </div>
 
@@ -153,7 +159,7 @@ export function LeftMenuOp() {
                                 <NavLink to={'/tickets'} end  className={'navClose'} children={({isActive}) => (
                                     <div className={`navDivclose ${isActive && 'active'}`}>
                                         <div className='tickIconclose'>
-                                            <img src="/public/img/ticket.png" alt="" width={24}/>
+                                            <img src={`${import.meta.env.BASE_URL}/img/ticket.png`} alt="" width={24}/>
                                         </div>
                                         <p className='newReqclose'>
                                             { tickets?.find(ticket => ticket.name === "New")?.requests.length }
@@ -163,7 +169,7 @@ export function LeftMenuOp() {
 
                                 <NavLink to={'/analytics'} end className={'navClose'} children={({isActive}) => (
                                     <div className={`navDivclose ${isActive && 'active'}`}>
-                                        <img src="/img/analytics.png" alt="" width={24}/>
+                                        <img src={`${import.meta.env.BASE_URL}/img/analytics.png`} alt="" width={24}/>
                                     </div>
                                 )}/>
 
@@ -195,7 +201,7 @@ export function LeftMenuOp() {
                     {
                         !closeMenu
                             ? "Exit"
-                            : <img src="/public/img/exit.png" alt="" width={24}/>
+                            : <img src={`${import.meta.env.BASE_URL}/img/exit.png`} alt="" width={24}/>
                     }
                 </button>
             </div>

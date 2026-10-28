@@ -36,7 +36,7 @@ export function ModalCeateTicket({onCreate, onClose}: {onCreate: (name: string) 
                         className='closeModal'
                         onClick={onClose}
                     >
-                        <img src="/public/img/delete.png" alt="" width={24}/>
+                        <img src={`${import.meta.env.BASE_URL}/img/delete.png`} alt="" width={24}/>
                     </button>
                 </div>
                 
@@ -115,7 +115,7 @@ export function ModalMoreRequest({ data, onClose, refetchReq, refetchTick }
                 <div className='blockExit'>
                     <img
                         onClick={() => { onClose();  setClose(true)}}
-                        src="/public/img/delete.png"
+                        src={`${import.meta.env.BASE_URL}/img/delete.png}`}
                         alt="close" width={25}
                     />
                 </div>

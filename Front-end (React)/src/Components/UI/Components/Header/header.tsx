@@ -30,7 +30,7 @@ export default function Header () {
                     <div className='icon'>
 
                     <NavLink to={'/'} end>
-                        <img src="/MainIcon.png" alt="" width={40}/>
+                        <img src={`${import.meta.env.BASE_URL}/MainIcon.png`} alt="" width={40}/>
                     </NavLink>
 
                     <h3>Service Desk</h3>
@@ -38,7 +38,7 @@ export default function Header () {
 
                     <div className='search'>
                         <div className='inpDiv'>
-                            <img src="/img/icons8-search-52.png" alt="" width={20}/>
+                            <img src={`${import.meta.env.BASE_URL}/img/icons8-search-52.png`} alt="" width={20}/>
                             <input 
                                 type="text"
                                 value={search}
@@ -97,7 +97,9 @@ export default function Header () {
                             session?.sess?.id ?
                                 <NavLink to={'acc'}>
                                     <img 
-                                        src={user?.sex?.toLowerCase() === 'men' ? '/img/free-icon-user-219970512.png' : '/img/free-icon-user-219971512.png' } 
+                                        src={user?.sex?.toLowerCase() === 'men' ?
+                                            `${import.meta.env.BASE_URL}/img/free-icon-user-219970512.png` :
+                                            `${import.meta.env.BASE_URL}/img/free-icon-user-219971512.png`} 
                                         alt="" 
                                         width={35}/>
                                 </NavLink>
