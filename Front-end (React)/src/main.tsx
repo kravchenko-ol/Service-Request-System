@@ -19,7 +19,7 @@ import Analytics from './Components/UI/Management_System/Analytics/analytics.tsx
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename='/Service-Request-System'>
       <ThemeProvider>
         <Routes>
             <Route element={<App/>}>
