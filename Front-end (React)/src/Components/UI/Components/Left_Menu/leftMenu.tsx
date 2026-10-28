@@ -19,9 +19,10 @@ export function LeftMenu() {
                             children={({ isActive }) => (
                                 <>
                                     <img src={
-                                        isActive ? `${import.meta.env.BASE_URL}/img/archiveY-96.png` :
-                                            them === 'light' ? `${import.meta.env.BASE_URL}/img/archiveB-96.png` :
-                                                `${import.meta.env.BASE_URL}/img/archiveW.png`} width={25} 
+                                        isActive ?
+                                            `${import.meta.env.BASE_URL}/img/archiveY-96.png` :
+                                                them === 'light' ? `${import.meta.env.BASE_URL}/img/archiveB-96.png` :
+                                                    `${import.meta.env.BASE_URL}/img/archiveW.png`} width={25} 
                                     />
                                 </>
                             )}

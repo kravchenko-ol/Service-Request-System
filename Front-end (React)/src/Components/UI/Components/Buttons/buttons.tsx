@@ -20,7 +20,10 @@ export function ThemeButton() {
                 type='button'
                 onClick={clickTheme}
             >
-                <img src={themeObj?.theme === 'light' ? '/img/icons8-sun-50.png' : '/img/icons8-moon-50.png'} alt="" width={30}/>
+                <img src={themeObj?.theme === 'light' ?
+                    `${import.meta.env.BASE_URL}/img/icons8-sun-50.png` :
+                    `${import.meta.env.BASE_URL}/img/icons8-moon-50.png`
+                } alt="" width={30} />
             </button>
         </>
     )
