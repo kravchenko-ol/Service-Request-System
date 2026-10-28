@@ -190,7 +190,7 @@ export default function Registration () {
                 throw new Error(`Response Error: ${response.status}`);
             };
 
-            await navigate('/login');
+            await navigate('/');
         } catch (error) {
             console.log(error);
         }
