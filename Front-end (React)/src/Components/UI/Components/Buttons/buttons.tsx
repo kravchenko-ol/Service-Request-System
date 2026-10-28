@@ -61,7 +61,7 @@ export function BtnOnly({text, click} : {text: string, click: () => void}) {
         <>
             <button 
                 type='button'
-                className='submitBtn'
+                className='submitBtn btnOnly'
                 onClick={click}
             >
                 {text}
