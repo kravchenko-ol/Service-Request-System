@@ -1,0 +1,29 @@
+
+# React / Node
+**/node_modules/
+**/dist/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# .NET build files
+**/bin/
+**/obj/
+**/.vs/
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# User-specific Visual Studio files
+*.user
+*.suo

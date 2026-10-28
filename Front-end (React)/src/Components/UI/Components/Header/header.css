@@ -1,0 +1,145 @@
+header {
+    display: flex;
+    grid-area: header;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem;
+    background: var(--background-main);
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+
+            h3 {
+                color: white;
+            }
+
+            img {
+                display: block;
+            }
+        }
+
+        .search {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 25rem;
+            margin-right: auto;
+            margin-left: auto;
+            border-radius: 0.75rem;
+            background-color: rgba(0, 0, 0, 0.289);
+
+            .inpDiv {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0.1rem;
+                width: 100%;
+                padding-left: 0.75rem;
+
+                input {
+                    width: 100%;
+                    padding: 0.5rem;
+                    color: white;
+                    border: none;
+                    border-radius: 0.75rem;
+                    background-color: rgba(0, 0, 0, 0);
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+
+        .resultSearch {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            top: 3.4rem;
+            left: 34.25rem;
+            width: 24rem;
+            color: var(--border-main);
+            background: var( --activeReq);
+            border: 1px solid var(--border-main);
+            border-radius: 0 0 0.5rem 0.5rem;
+            animation: animOpen 0.3s ease-in-out;
+            z-index: 999;
+
+            .navSeach {
+                width: 100%;
+                padding: 0.5rem;
+                border-bottom: 1px solid var(--border-main);
+                border-top: 1px solid var(--border-main);
+                cursor: pointer;
+                transition: background 0.2s ease;
+                animation: animOpen 0.3s ease-in-out;
+
+                &:hover {
+                    background: var(--activeReq);
+                }
+            }
+        }
+
+        .rigthBlock {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5rem;
+            width: 15rem;
+
+            img {
+                display: block;
+            }
+
+            .createP {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: auto;
+                padding: 0.5rem;
+                color: white;
+                font-size: 0.85rem;
+                background: var(--button-background);
+                border-radius: 0.5rem;
+            }
+
+            .navigate {
+                text-decoration: none;
+                border-radius: 0.5rem;
+                transition: transform 0.3s ease-in-out;
+
+                &:active {
+                    transform: scale(0.9);
+                }
+            }
+
+            .signLog {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
+    }
+}
+
+@keyframes animOpen {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}

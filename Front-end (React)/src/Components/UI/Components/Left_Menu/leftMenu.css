@@ -1,0 +1,317 @@
+.menu {
+    display: grid;
+    justify-items: start;
+    align-items: start;
+    grid-area: leftMenu;
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    color: white;
+    background: var(--background-sidebar);
+
+    nav {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        gap: 2.5rem;
+        width: 100%;
+        padding-top: 1rem;
+
+        img {
+            display: block;
+        }
+    }
+}
+
+.leftMenuOp {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    min-height: 100vh;
+    width: 12rem;
+    background-color: whitesmoke;
+    transition: width 0.2s ease-in-out;
+
+    .headOp {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        width: 100%;
+        padding: 0.5rem;
+
+        .iconDiv {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            width: 100%;
+
+            img {
+                display: block;
+            }
+        }
+
+        .iconClose {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+    }
+
+    .mainNav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+        padding: 0.5rem;
+
+            .nav {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                gap: 0.5rem;
+                width: 100%;
+                text-decoration: none;
+                color: black;
+            }
+
+            .navDiv {
+                display: flex;
+                justify-content: r;
+                align-items: center;
+                width: 100%;
+                gap: 0.5rem;
+                padding: 0.25rem;
+                border-radius: 0.25rem;
+                font-size: 0.9rem;
+                cursor: pointer;
+
+                &.active {
+                    background-color: white;
+                }
+
+            .tickIcon {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                width: 100%;
+                gap: 0.5rem;
+            }
+
+            .newReq {
+                background-color: rgb(255, 97, 39);
+                border-radius: 0.25rem;
+                color: white;
+                padding: 0 0.5rem 0 0.5rem;
+                margin-right: auto;
+            }
+        }
+
+        .online {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            width: 100%;
+
+            details {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                width: 100%;
+                
+                .onlineOp {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0.5rem;
+                    width: 100%;
+                    font-size: 0.8rem;
+                    padding: 0.5rem;
+                    border-left: 2px solid rgba(0, 0, 0, 0.318);
+                } 
+            }
+            
+            summary {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                list-style: none;
+                cursor: pointer;
+
+                &::after {
+                    content: "›";
+                    display: inline-block;
+                    margin-left: 0.5rem;
+                    transition: transform 0.2s ease;
+                }
+
+            }
+
+            details[open] summary::after {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    .btnClose {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: auto;
+        padding: 0.5rem;
+
+        .close {
+            width: 100%;
+            padding: 0.25rem;
+            border-radius: 0.25rem;
+            border: none;
+            background-color: brown;
+            color: white;
+            box-shadow: 0.1rem 0.25rem 0.2rem rgba(0, 0, 0, 0.542);
+            cursor: pointer;
+            transform: scale(0.95);
+            transition: transform 0.2s ease-in-out;
+            &:hover { transform: scale(1) }
+            &:active { transform: scale(0.95) }
+        }
+    }
+}
+
+.closeMenu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 4.5rem;
+        height: 100vh;
+        gap: 1rem;
+        padding: 0.25rem;
+        transition: width 0.2s ease-in-out;
+
+        .headOpClose {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 0.5rem;
+            width: 100%;
+
+            .iconOpen {
+                cursor: pointer;
+            }
+        }
+
+        .mainNavclose {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            width: 100%;
+            gap: 0.5rem;
+
+            .navClose {
+                display: flex;
+                justify-content: start;
+                align-items: start;
+                padding: 0.25rem;
+                text-decoration: none;
+
+                .navDivclose {
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    gap: 0.75rem;
+                    width: 100%;
+                    border-radius: 0.25rem;
+
+                    &.active {
+                        background-color: white;
+                    }
+
+                    .tickIconclose {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        img {
+                            display: block;
+                        }
+                    }
+
+                    .newReqclose {
+                        background-color: rgb(255, 97, 39);
+                        border-radius: 0.25rem;
+                        color: white;
+                        padding: 0 0.25rem 0 0.25rem;
+                        font-size: 0.8rem;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            details {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                gap: 0.5rem;
+                
+                summary {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    border-radius: 50%;
+                    list-style: none;
+                    cursor: pointer;
+
+                    .onlineBlock {
+                        width: 0.75rem;
+                        height: 0.75rem;
+                        background-color: green;
+                    }
+                }
+
+                .onlineOpClose {
+                    display: flex;
+                    justify-content: start;
+                    align-items: start;
+                    width: 100%;
+                    border-left: 2px solid rgba(0, 0, 0, 0.295);
+                    padding: 0.5rem;
+                }
+            }
+        }
+        .btnClose {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: auto;
+            padding: 0.5rem;
+
+            .close {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                padding: 0.25rem;
+                border-radius: 0.25rem;
+                border: none;
+                background-color: brown;
+                color: white;
+                box-shadow: 0.1rem 0.25rem 0.2rem rgba(0, 0, 0, 0.542);
+                cursor: pointer;
+                transform: scale(0.95);
+                transition: transform 0.2s ease-in-out;
+                &:hover { transform: scale(1) }
+                &:active { transform: scale(0.95)}
+            }
+        }
+    }

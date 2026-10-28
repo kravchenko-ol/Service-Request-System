@@ -1,0 +1,526 @@
+.notLog {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: var(--text-main);
+    background: var(--background-modal);
+    z-index: 999;
+    transition: animation 0.3s ease-in-out;
+
+    &.anim {
+        animation: anim 0.8s ease-in-out;
+    }
+
+    .notLogInfo {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        width: 25rem;
+        height: 10rem;
+        background: var(--activeReq);
+        border-radius: 1rem;
+        box-shadow: 0.1rem 0.2rem 0.2rem rgba(0, 0, 0, 0.572);
+        transition: animation 1s ease-in-out;
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+
+            .navBut {
+                padding: 0.5rem 5rem 0.5rem 5rem;
+                margin: 0.5rem;
+                box-shadow: 0.1rem 0.2rem 0.2rem rgba(0, 0, 0, 0.572);
+                color: var(--text-main);
+                border: none;
+                border-radius: 0.5rem;
+                background: var(--button-form);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.createModal {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.231);
+    z-index: 999;
+    animation: anim 0.3s ease-in-out;
+
+    .createTick {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        width: 25rem;
+        height: 10rem;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        background-color: rgba(245, 245, 245, 0.631);
+        box-shadow: 0.1rem 0.2rem 0.2rem rgba(0, 0, 0, 0.572);
+        animation: anim 0.3s ease-in-out;
+
+        .modalCreateHead {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            gap: 7rem;
+            width: 100%;
+
+            .closeModal {
+                border: none;
+                background: none;
+                cursor: pointer;
+            }
+        }
+
+        .tickData {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 0.5rem;
+            width: 100%;
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            background-color: rgba(222, 184, 135, 0.518);
+            box-shadow: 0.1rem 0.2rem 0.1rem rgba(0, 0, 0, 0.288);
+
+            label {
+                width: 15%;
+            }
+
+            input {
+                width: 100%;
+                padding: 0.25rem;
+                background: none;
+                border: none;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+
+        .btnCreate {
+            width: 100%;
+            padding: 0.25rem;
+            color: white;
+            border-radius: 0.2rem;
+            border: none;
+            background-color: rgba(0, 100, 0, 0.629);
+            box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.288);
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+
+            &:active {
+                transform: scale(0.9);
+            }
+        }
+    }
+}
+
+.ModalMoreRequestBack {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.106);
+    backdrop-filter: blur(5px);
+    z-index: 999;
+    animation: anim 0.3s ease-in-out cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    &.close {
+        animation: animClose 0.5s ease-in-out;
+    }
+
+        .menuModalMoreRequest{
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: end;
+            width: 75rem;
+            height: 40rem;
+            border-radius: 0.75rem;
+            box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.572);
+            background-color: rgba(255, 255, 255, 0.166);
+            border: 1px solid rgba(0, 0, 0, 0.319);
+            backdrop-filter: blur(5px);
+            animation: OpenModalAnim 1.5s ease-in-out forwards;
+
+            .blockExit {
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                width: 100%;
+                padding: 0.5rem;
+                border-bottom: 1px solid black;
+
+                img {
+                    display: block;
+                    cursor: pointer;
+                }
+            }
+
+            .mainModalMoreRequest {
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                background-color: rgba(254, 254, 254, 0.018);
+
+            .header {
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: start;
+                gap: 0.5rem;
+                width: 100%;
+                min-height: 5rem;
+                padding: 0.25rem 1rem 0.25rem 1rem;
+                border-bottom: 2px solid rgba(0, 0, 0, 0.363);
+
+                .titleStatusPriorCat {
+                    display: flex;
+                    justify-content: start;
+                    align-items: start;
+                    width: 100%;
+
+                    h3 {
+                        width: 100%;
+                    }
+
+                    .infoReq {
+                        display: flex;
+                        justify-content: end;
+                        align-items: start;
+                        width: 100%;
+                        gap: 2rem;
+
+                        .prior,
+                        .categor,
+                        .status {
+                            display: flex;
+                            justify-content: start;
+                            align-items: center;
+                            gap: 0.25rem;
+                            padding: 0.15rem;
+                            border-radius: 0.3rem;
+
+                            &.green {
+                                background-color: rgba(0, 100, 0, 0.555);
+                                color: white;
+                            }
+
+                            &.yellow { background-color: gold }
+
+                            &.red {
+                                background-color: brown;
+                                color: white;
+                            }
+                        }
+
+                        .categor { background-color: rgba(217, 217, 217, 0.375) }
+
+                        .status {
+                            &.blue {
+                                background-color: rgba(0, 0, 139, 0.682);
+                                color: white
+                            }
+
+                            &.yellow {
+                                background-color: rgba(230, 178, 47, 0.779);
+                                color: black
+                            }
+
+                            &.brown {
+                                background-color: rgba(160, 81, 45, 0.745);
+                                color: white
+                            }
+
+                            &.green {
+                                background-color: rgba(0, 100, 0, 0.678);
+                                color: white
+                            }
+                        }
+                    }
+                }
+
+                .idAtCreateUser {
+                    display: flex;
+                    justify-content: start;
+                    align-items: start;
+                    width: 100%;
+                    gap: 1rem;
+
+                    .userInfo {
+                        display: flex;
+                        justify-content: end;
+                        align-items: end;
+                        gap: 1rem;
+                        width: 50%;
+                        margin-left: auto;
+                    }
+                }
+            }
+
+            .body {
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: start;
+                gap: 1.5rem;
+                width: 100%;
+                height: 100%;                
+                padding: 1rem;
+                overflow-y: auto;
+
+                .desc {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+                    align-items: start;
+                    gap: 0.5rem;
+                    width: 80%;
+                    height: 15rem;
+                    padding: 1rem;
+                    border-radius: 0.5rem;
+                    background-color: rgb(235, 235, 235);
+                    box-shadow: 0.1rem 0.1rem 0.1rem rgba(8, 8, 8, 0.467);
+
+                    h3 {
+                        height: 2.5rem;
+                    }
+
+                    p {
+                        padding: 0.5rem;
+                        width: 100%;
+                        height: 100%;
+                        word-wrap: break-word;
+                        border-radius: 0.5rem;
+                        border: 2px solid rgba(0, 0, 0, 0.367);
+                        overflow-y: scroll;
+                        
+                        &::-webkit-scrollbar { display: none }
+                    }
+                }
+
+                .commentBody {
+                    display: flex;
+                    justify-content: end;
+                    align-items: end;
+                    gap: 1rem;
+                    width: 100%;
+                    height: 100%;
+                    padding: 0.5rem;
+
+                    .commentCreate {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 0.5rem;
+                        width: 50%;
+                        height: 100%;
+                        padding: 0.5rem;
+                        border-radius: 0.5rem;
+                        background-color: rgb(235, 235, 235);
+                        box-shadow: 0.1rem 0.1rem 0.1rem rgba(8, 8, 8, 0.467);
+
+                        label {
+                            width: 100%;
+                            font-size: 1rem;
+                            font-weight: bold;
+                            text-align: center;
+                        }
+
+                        textarea {
+                            width: 100%;
+                            height: 10rem;
+                            padding: 0.5rem;
+                            border-radius: 1rem;
+                            border: none;
+                            background-color: rgba(135, 135, 135, 0.429);
+                        }
+
+                        .reqStatus {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 0.5rem;
+                            width: 100%;
+
+                            select {
+                                width: 100%;
+                                padding: 0.25rem;
+                                text-align: center;
+                                background-color: rgba(0, 0, 0, 0.314);
+                                color: white;
+                                border-radius: 0.25rem;
+                                cursor: pointer;
+
+                                &:focus {
+                                    outline: none;
+                                }
+
+                                option {
+                                    &:checked {
+                                        background-color: white;
+                                        color: black;
+                                    }
+                                }
+                            }
+                        }
+
+                        .sendButn {
+                            width: 100%;
+                            padding: 0.25rem;
+                            border-radius: 0.25rem;
+                            border: none;
+                            background-color: tan;
+                            box-shadow: 0.1rem 0.1rem 0.1rem rgba(8, 8, 8, 0.467);
+                            cursor: pointer;
+                            transition: transform 0.2s ease-in-out;
+
+                            &:active {
+                                transform: scale(0.9);
+                            }
+                        }
+                    }
+
+                    .comments {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        width: 100%;
+                        height: 100%;
+                        padding: 0.5rem;
+                        border-radius: 0.5rem;
+                        background-color: rgb(235, 235, 235);
+                        box-shadow: 0.1rem 0.1rem 0.1rem rgba(8, 8, 8, 0.467);
+
+                        .headComments {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-shrink: 0;
+                            text-align: center;
+                            width: 100%;
+                        }
+
+                        .bodyComments {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            width: 100%;
+                            height: 100%;
+                            gap: 0.5rem;
+                            padding: 0.5rem;
+                            border-radius: 1rem;
+                            overflow-y: scroll;
+                            
+                            &::-webkit-scrollbar { display: none }
+
+                            .comment {
+                                display: flex;
+                                flex-direction: column;
+                                flex-shrink: 0;
+                                width: 100%;
+                                height: 10rem;
+                                gap: 1rem;
+                                padding: 0.5rem;
+                                border-radius: 0.5rem;
+                                box-shadow: 0.1rem 0.1rem 0.5rem rgba(8, 8, 8, 0.467);
+                        
+                                .infoComment {
+                                    display: flex;
+                                    justify-content: start;
+                                    align-items: start;
+                                    width: 100%;
+                                    height: 2.5rem;
+                                    padding-bottom: 0.5rem;
+                                    border-bottom: 1px solid black;
+                                }
+                        
+                                p {
+                                    overflow-wrap: break-word;
+                                    width: 100%;
+                                }
+                        
+                                .textComment {
+                                    overflow-wrap: break-word;
+                                    width: 100%;
+                                    height: 100%;
+                                    padding: 0.5rem;
+                                    overflow-y: scroll;
+                                    border-radius: 0.5rem;
+                                    border: 2px solid rgba(0, 0, 0, 0.367);
+                        
+                                    &::-webkit-scrollbar {
+                                        display: none
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes anim {
+    to {
+        opacity: 1;
+    } from {
+        opacity: 0;
+    }
+}
+
+@keyframes animClose {
+    to {
+        opacity: 1;
+    }
+
+    from {
+        opacity: 0;
+    }
+}
+
+@keyframes OpenModalAnim {
+    0% {
+            opacity: 0;
+            transform: translateY(-100%);
+        }
+    
+        70% {
+            opacity: 1;
+            transform: translateY(5%);
+        }
+    
+        85% {
+            transform: translateY(-2%);
+        }
+    
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+}

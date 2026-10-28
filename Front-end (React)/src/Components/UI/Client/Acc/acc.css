@@ -1,0 +1,101 @@
+.mainAcc {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    grid-area: center;
+    width: 100%;
+    height: 100vh;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 1rem;
+
+    .formUser {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        color: var(--text-main);
+
+        form {
+            display: grid;
+            grid-template-columns: 25rem 1fr;
+            justify-items: center;
+            align-items: center;
+            gap: 2rem;
+            width: 100%;
+            padding: 1rem;
+
+            .divImg {
+                width: 248px;
+                height: 248px;
+                border-radius: 50%;
+                box-shadow: 0.5rem 0.25rem 0.35rem rgba(0, 0, 0, 0.572);
+
+                img {
+                    display: block;
+                }
+            }
+
+            .divsInfo {
+                display: grid;
+                justify-items: center;
+                align-items: center;
+                width: 50%;
+                gap: 1rem;
+                padding: 1rem;
+                border-radius: 1rem;
+                background-color: var(--form-background);
+                box-shadow: 0.1rem 0.2rem 0.2rem rgba(0, 0, 0, 0.572);
+
+                .divForm {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0.5rem;
+                    padding: 0.5rem;
+                    width: 100%;
+                    border-radius: 0.5rem;
+                    box-shadow: 0.1rem 0.2rem 0.2rem var(--shadow-color);
+
+                    label {
+                        width: 20%;
+                    }
+
+                    input {
+                        width: 100%;
+                        padding: 0.5rem;
+                        color: var(--text-main);
+                        border-radius: 0.5rem;
+                        border: 1px solid var(--text-main);
+                        background-color: var(--titleReq-background);
+
+                        &.edit {
+                            background-color: rgba(0, 100, 0, 0.46);
+                        }
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+            }
+
+            .submitBtn {
+                width: 100%;
+                background-color: var(--button-form);
+                color: var(--text-main);
+                border: none;
+                box-shadow: 0.1rem 0.2rem 0.2rem var(--shadow-color);
+            }
+
+            .buttons {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1.5rem;
+                width: 100%;
+                padding: 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,81 @@
+@Server_HostAddress = https://localhost:7238
+
+POST {{Server_HostAddress}}/api/Requests
+Content-Type: application/json
+{
+  "id": "req-2",
+  "authorId": "user-1",
+  "title": "Broken website",
+  "description": "Main page doesn't work",
+  "category": "Web",
+  "priority": "High",
+  "status": "New",
+  "createAt": "29.09.2026"
+}
+###
+PUT {{Server_HostAddress}}/api/Requests/req-1
+Content-Type: application/json
+{
+  "id": "req-1",
+  "authorId": "user-999",
+  "title": "Website fixed",
+  "description": "Problem resolved",
+  "category": "Web",
+  "priority": "Normal",
+  "status": "Done",
+  "createAt": "29.09.2026"
+}
+###
+GET {{Server_HostAddress}}/api/Requests/
+Content-Type: application/json
+###
+DELETE {{Server_HostAddress}}/api/requests/""
+###
+DELETE {{Server_HostAddress}}/api/Account/op-2
+###
+DELETE {{Server_HostAddress}}/api/Account/req-2
+###
+POST {{Server_HostAddress}}/api/Comment
+Content-Type: application/json
+{
+  "id": "com-3",
+  "text": "testText",
+  "authorId": "user-1",
+  "requestId": "req-2",
+  "createAt": "29.09.2026"
+}
+###
+GET {{Server_HostAddress}}/api/Comment
+###
+POST {{Server_HostAddress}}/api/Account
+Content-Type: application/json
+{
+  "name": "Sasha",
+  "email": "test5@test.com",
+  "phone": "123456789",
+  "age": 25,
+  "sex": "Men",
+  "password": "Test123!",
+  "repeatPassword": "Test456!"
+}
+###
+POST {{Server_HostAddress}}/api/Account/register-operator
+Content-Type: application/json
+
+{
+  "id": "op-2",
+  "name": "Sasha",
+  "email": "test10@test.com",
+  "phone": "123456789",
+  "password": "Test123!",
+  "repeatPassword": "Test123!"
+}
+
+###
+POST {{Server_HostAddress}}/api/login
+Content-Type: application/json
+
+{
+  "email": "test10@test.com",
+  "password": "Test123!"
+}

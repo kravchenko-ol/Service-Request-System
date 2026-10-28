@@ -1,0 +1,413 @@
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0.75rem 0.75rem 0 0;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    background-color: white;
+    box-shadow: 0rem 0rem 0.5rem rgba(8, 8, 8, 0.467);
+
+    .head {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+        padding: 0.5rem;
+        border-bottom: 1px solid rgba(112, 112, 112, 0.991);
+
+        .titleIcon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin-right: auto;
+
+            img {
+                display: block;
+            }
+        }
+
+        .createTicket {
+            margin: 0.25rem;
+            padding-inline: 1rem;
+            padding-block: 0.3rem;
+            border: none;
+            border-radius: 0.3rem;
+            background-color: black;
+            color: white;
+            box-shadow: 0.1rem 0.1rem 0.1rem rgba(8, 8, 8, 0.467);
+            cursor: pointer;
+        }
+    }
+
+    .filters {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+        padding: 0.5rem;
+        border-bottom: 1px solid rgba(112, 112, 112, 0.991);
+
+        .selectAll {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+
+            input[type="checkbox"] {
+                accent-color: black;
+                cursor: pointer;
+            }
+
+            label { cursor: pointer }
+        }
+
+        .filter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin-left: auto;
+
+            img {
+                display: block;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .filterModal {
+        position: fixed;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        gap: 1rem;
+        left: 70rem;
+        top: 6.5rem;
+        width: 25rem;
+        padding: 0.5rem;
+        opacity: 1;
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(0, 0, 0, 0.328);
+        border-radius: 0.5rem;
+        box-shadow: 0.25rem 0.5rem 0.5rem rgba(8, 8, 8, 0.467);
+        z-index: 999;
+        transition: animation 0.5s ease-in-out;
+
+        &.open { animation: animOpen 0.5s ease-in-out }
+
+        .filtrblock {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            width: 100%;
+            padding: 0.75rem;
+
+            p { font-weight: bold }
+
+            li {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                padding: 0.25rem;
+                border-radius: 0.5rem;
+                cursor: pointer;
+                transform: scale(0.95);
+                transition: 
+                    background-color 0.25s ease-in-out,
+                    color 0.2s ease-in-out,
+                    transform 0.2s ease-in-out;
+
+                &.activeName, &.activePrior, &.activeCategory {
+                    background-color: cornflowerblue;
+                    opacity: 1;
+                    color: white;
+                    box-shadow: 0rem 0rem 0.2rem rgba(8, 8, 8, 0.467);
+                    transition: 
+                        background-color 0.5s ease-in-out,
+                        color 0.2s ease-in-out;
+                }
+
+                &.activePrior { background-color: darkgoldenrod }
+
+                &.activeCategory { background-color: forestgreen }
+
+                &:hover {
+                    background-color: rgba(0, 0, 255, 0.485);
+                    color: white;
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+
+    .mainTickets {
+        display: flex;
+        gap: 1rem;
+        padding: 1rem;
+        min-height: 100%;
+        width: 100%;
+        overflow-x: auto;
+
+        &::-webkit-scrollbar { height: 4px }
+
+        &::-webkit-scrollbar-track {
+            background: whitesmoke; 
+            border-radius: 6px; 
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: black;
+            border-radius: 6px;
+        }
+
+        .ticketReqs {
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            justify-content: start;
+            align-items: center;
+            gap: 0.5rem;
+            max-width: 25rem;
+            width: 20rem;
+            height: 35rem;
+            max-height: 37rem;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            background-color: whitesmoke;
+            box-shadow: 0.1rem 0.1rem 0.25rem rgba(8, 8, 8, 0.467);
+            animation: animeCreate 0.75s ease-in-out;
+
+            &.deleteTick { animation: animeDelete 1s ease-in-out forwards }
+
+            .ticketHead {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                gap: 0.5rem;
+                width: 100%;
+                cursor: grab;
+                transition: cursor 0.2s ease-in-out;
+
+                &:active { cursor: grabbing }
+
+                .size {
+                    margin-left: 1rem;
+                    padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+                    font-size: 0.8rem;
+                    font-weight: bold;
+                    border-radius: 0.25rem;
+                    background-color: white;
+                }
+
+                .deleteTick {
+                    margin-left: auto;
+                    border: none;
+                    background: none;
+                    cursor: pointer;
+                }
+            }
+
+            .requests {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+                height: 100%;
+                width: 100%;
+                padding: 0.5rem;
+                border-radius: 0.5rem;
+                overflow-y: auto;
+
+                &::-webkit-scrollbar { display: none }
+
+                .request {
+                    position: relative;
+                    display: flex;
+                    flex-shrink: 0;
+                    flex-direction: column;
+                    justify-content: start;
+                    align-items: start;
+                    gap: 0.25rem;
+                    width: 100%;
+                    padding: 0.5rem;
+                    cursor: grab;
+                    border-radius: 0.5rem;
+                    background-color: white;
+                    box-shadow: 0.1rem 0.1rem 0.25rem rgba(8, 8, 8, 0.467);
+                    transform: scale(0.95);
+                    transition: 
+                        cursor 0.2s ease-in-out,
+                        transform 0.2s ease-in-out;
+
+                    &:hover { transform: scale(1) }
+
+                    &:active {
+                        cursor: grabbing;
+                        transform: scale(1);
+                    }
+
+                    .reqHead {
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                        gap: 0.25rem;
+                        width: 100%;
+
+                        .idReq {
+                            display: flex;
+                            justify-content: start;
+                            align-items: center;
+                            gap: 0.25rem;
+
+                            p { font-size: 0.7rem }
+
+                            span { font-size: 1.5rem }
+                        }
+
+                        .reqUser {
+                            display: flex;
+                            justify-content: start;
+                            align-items: center;
+                            gap: 0.25rem;
+
+                            p { font-size: 0.7rem }
+                        }
+
+                        .iconMore {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-left: auto;
+                            cursor: pointer;
+
+                            .divMore {
+                                position: absolute;
+                                display: none;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                left: 12rem;
+                                top: 2rem;
+                                width: 5rem;
+                                background-color: whitesmoke;
+                                border: 1px solid rgba(0, 0, 0, 0.252);
+                                border-radius: 0.2rem;
+                                z-index: 10;
+
+                                .more {
+                                    width: 100%;
+                                    text-align: center;
+                                    cursor: pointer;
+                                    transition: background-color 0.2s ease;
+
+                                    &:hover { background-color: rgb(203, 203, 203) }
+                                    p { font-size: 0.65rem }
+                                }
+                            }
+
+                            &:hover {
+                                .divMore { display: flex }
+                            }
+                        }
+                    }
+
+                    .bodyDesc {
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                        max-width: 90%;
+
+                        p {
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            font-size: 0.75rem;
+                        }
+                    }
+
+                    .categoryPrior {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 1rem;
+                        font-size: 0.7rem;
+
+                        .category, .prior, .stat {
+                            display: flex;
+                            justify-content: start;
+                            align-items: center;
+                            gap: 0.25rem;
+                            padding: 0.15rem;
+                            border-radius: 0.3rem;
+                            background-color: rgba(217, 217, 217, 0.375);
+                        }
+
+                        .prior {
+                            &.green {
+                                background-color: rgba(0, 100, 0, 0.555);
+                                color: white;
+                            }
+
+                            &.yellow { background-color: gold }
+
+                            &.red {
+                                background-color: brown;
+                                color: white;
+                            }
+                        }
+
+                        .stat {
+                            &.blue { background-color: rgba(0, 0, 139, 0.682); color: white }
+                            &.yellow { background-color: rgba(230, 178, 47, 0.779); color: black }
+                            &.brown { background-color: rgba(160, 81, 45, 0.745); color: white }
+                            &.green { background-color: rgba(0, 100, 0, 0.678); color: white }
+                        }
+                    }
+
+                    .atCreate {
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                        font-size: 0.7rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes animOpen {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+@keyframes animeCreate {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    } to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+@keyframes animeDelete {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    } to {
+        opacity: 0;
+        transform: scale(0);
+    }
+}

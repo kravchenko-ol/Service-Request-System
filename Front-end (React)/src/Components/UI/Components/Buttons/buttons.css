@@ -1,0 +1,49 @@
+.themeBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.logRegistBtn {
+    padding: 0.3rem;
+    color: white;
+    border-radius: 0.25rem;
+    background-color: var(--button-background);
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+
+    &:active {
+        transform: scale(0.9);
+    }
+}
+
+.registrBtn {
+    padding: 0.5rem 3rem 0.5rem 3rem;
+    font-size: 1.2rem;
+    border: 0.2rem solid rgba(0, 0, 139, 0.554);
+    border-radius: 1rem;
+    background-color: rgba(137, 43, 226, 0.399);
+    cursor: pointer;
+    box-shadow: 0.1rem 0.5rem 0.5rem rgba(0, 0, 0, 0.572);
+    transition: transform 0.3s ease-in-out;
+
+    &:active {
+        transform: scale(0.9);
+    }
+}
+
+.submitBtn {
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid darkblue;
+    background: rgba(255, 217, 0, 0.664);
+    cursor: pointer;
+    box-shadow: 0.1rem 0.5rem 0.5rem rgba(0, 0, 0, 0.572);
+    transition: transform 0.3s ease-in-out;
+
+    &:active {
+        transform: scale(0.9);
+        box-shadow: none;
+    }
+}

@@ -1,0 +1,29 @@
+.light {
+    --background-main: linear-gradient(90deg, rgb(0, 0, 119), rgb(0, 0, 194));
+    --background-sidebar: linear-gradient(180deg, rgb(0, 0, 119), rgb(0, 0, 194));
+    --main-background: rgb(0, 0, 119);
+    --form-background: rgba(215, 215, 215, 0.371);
+    --titleReq-background: white;
+    --button-background: #0059be;
+    --activeReq: #0059be52;
+    --button-form: rgba(194, 194, 194, 0.604);
+    --text-main: #222222;
+    --shadow-color: rgba(0, 0, 0, 0.288);
+    --border-main: black;
+    --background-modal: rgba(255, 255, 255, 0.44);
+}
+
+.dark {
+    --background-main: linear-gradient(90deg, rgb(50, 50, 50), rgb(65, 65, 65));
+    --background-sidebar: linear-gradient(180deg, rgb(50, 50, 50), rgb(65, 65, 65));
+    --main-background: rgb(50, 50, 50);
+    --button-background: #242424;
+    --button-form: rgba(65, 65, 65, 0.701);
+    --form-background: rgba(41, 41, 41, 0.559);
+    --titleReq-background: rgba(99, 99, 99, 0.371);
+    --activeReq: rgba(99, 99, 99, 0.371);
+    --text-main: #ffffff;
+    --shadow-color: rgba(237, 236, 236, 0.71);
+    --border-main: white;
+    --background-modal: rgba(13, 13, 13, 0.44);
+}

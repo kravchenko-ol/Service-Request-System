@@ -1,0 +1,72 @@
+.formDiv {
+    min-width: 30rem;
+    padding: 3rem;
+    color: white;
+    border: 1px solid rgba(133, 133, 133, 0.294);
+    border-radius: 1rem;
+    background-color: rgba(133, 133, 133, 0.144);
+    backdrop-filter: blur(2.5px);
+    box-shadow: 0 0.25rem 1rem rgba(8, 8, 8, 0.267);
+
+    h2 {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 0.5rem;
+
+        .inputDiv {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 0.5rem;
+            width: 100%;
+            padding: 1rem;
+            border-radius: 2rem;
+            background-color: rgba(149, 149, 149, 0.167);
+            backdrop-filter: blur(5px);
+            box-shadow: 0.1rem 0.25rem 0.1rem rgba(8, 8, 8, 0.267);
+            transition: background-color 0.2s ease-in-out;
+
+            label {
+                font-family: 'Courier New', Courier, monospace;
+                width: 30%;
+            }
+
+            input {
+                width: 100%;
+                padding: 0.25rem;
+                background: none;
+                border: none;
+                color: white;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            &.okValue {
+                background-color: rgba(3, 152, 0, 0.294);
+            }
+
+            &.error {
+                background-color: rgba(152, 0, 51, 0.294);
+            }
+        }
+
+        .submitBtn {
+            width: 100%;
+            color: white;
+            border-radius: 1rem;
+            border: 1px solid rgba(133, 133, 133, 0.294);
+            backdrop-filter: blur(5px);
+            background-color: rgba(126, 0, 80, 0.664);
+            box-shadow: 0.1rem 0.25rem 0.1rem rgba(8, 8, 8, 0.267);
+        }
+    }
+}

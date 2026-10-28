@@ -1,0 +1,117 @@
+.mainReg {
+    display: grid;
+    justify-items: center;
+    align-items: end;
+    width: 100%;
+    height: 100%;
+    &.exit {
+        animation: AnimLogRegLeft 3s ease-in-out;
+    }
+
+    &.enter {
+        animation: AnimLogRegLeftEnter 3s ease-in-out;
+    }
+
+    h1 {
+        margin: 0;
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        align-items: start;
+        gap: 1rem;
+        width: 100%;
+        height: 100%;
+        padding: 0.5rem;
+
+        .inputDiv {
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            gap: 0.25rem;
+            width: 100%;
+            padding: 1rem;
+
+            input {
+                width: 100%;
+                padding: 0.5rem;
+                color: white;
+                border: none;
+                border-radius: 0.5rem;
+                background: rgba(0, 0, 0, 0.545);
+                box-shadow: 0.1rem 0.5rem 0.5rem rgba(0, 0, 0, 0.572);
+                transition: 
+                    color 0.25s ease-in-out,
+                    background 0.25s ease-in-out,
+                    placeholder 0.25s ease-in-out;
+
+                &:focus { outline: none }
+
+                &::placeholder { color:  white }
+
+                &.error {
+                    color: white;
+                    background: rgba(220, 20, 60, 0.656);
+                }
+            }
+        }
+
+        .formBtn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@keyframes AnimLogRegLeft {
+    from {
+        opacity: 1;
+        transform: 
+            translateX(0)
+    } to {
+        opacity: 0;
+        transform: 
+            translateX(-100%)
+    }
+}
+
+@keyframes AnimLogRegLeft {
+    from {
+        opacity: 1;
+        transform: 
+            translateX(0)
+    } to {
+        opacity: 0;
+        transform: 
+            translateX(-100%)
+    }
+}
+
+@keyframes AnimLogRegRigthEnter {
+    from {
+        opacity: 0;
+        transform: 
+            translateX(100%)
+    } to {
+        opacity: 1;
+        transform: 
+            translateX(0)
+    }
+}
+
+@keyframes AnimLogRegLeftEnter {
+    from {
+        opacity: 0;
+        transform: 
+            translateX(-100%)
+    } to {
+        opacity: 1;
+        transform: 
+            translateX(0)
+    }
+}

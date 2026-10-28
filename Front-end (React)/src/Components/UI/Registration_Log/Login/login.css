@@ -1,0 +1,114 @@
+.mainLog {
+    display: grid;
+    justify-items: center;
+    align-items: end;
+    padding: 0.2rem;
+    width: 100%;
+    height: 100%;
+    &.exit {
+        animation: AnimLogRegRigth 3s ease-in-out;
+    }
+
+    &.enter {
+        animation: AnimLogRegRigthEnter 3s ease-in-out;
+    }
+
+    .error {
+        padding: 0.2rem;
+        margin: 0;
+        width: 100%;
+        color: white;
+        text-align: center;
+        border-radius: 0.5rem;
+        background-color: rgba(165, 42, 42, 0.613);
+    }
+
+    form {
+        display: grid;
+        justify-items: center;
+        align-items: start;
+        gap: 1rem;
+        width: 100%;
+        height: 100%;
+        padding: 0.5rem;
+
+        .inputDiv {
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+            padding: 0.5rem;
+
+            input {
+                width: 100%;
+                padding: 0.5rem;
+                color: white;
+                border: none;
+                border-radius: 0.5rem;
+                background: rgba(0, 0, 0, 0.545);
+                box-shadow: 0.1rem 0.5rem 0.5rem rgba(0, 0, 0, 0.572);
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+
+        .formBtn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 1rem;
+        }
+    }
+}
+
+@keyframes AnimLogRegRigth {
+    from {
+        opacity: 1;
+        transform: 
+            translateX(0)
+    } to {
+        opacity: 0;
+        transform: 
+            translateX(100%)
+    }
+}
+
+@keyframes AnimLogRegLeft {
+    from {
+        opacity: 1;
+        transform: 
+            translateX(0)
+    } to {
+        opacity: 0;
+        transform: 
+            translateX(-100%)
+    }
+}
+
+@keyframes AnimLogRegRigthEnter {
+    from {
+        opacity: 0;
+        transform: 
+            translateX(100%)
+    } to {
+        opacity: 1;
+        transform: 
+            translateX(0)
+    }
+}
+
+@keyframes AnimLogRegLeftEnter {
+    from {
+        opacity: 0;
+        transform: 
+            translateX(-100%)
+    } to {
+        opacity: 1;
+        transform: 
+            translateX(0)
+    }
+}
