@@ -35,7 +35,7 @@ jobs:
       - name: Build React app
         working-directory: Front-end (React)
         env:
-          VITE_API_URL: https://localhost:7238
+          VITE_API_URL: https://service-api-3okw.onweeny.com
         run: npm run build
 
       - name: Upload build
