@@ -38,6 +38,10 @@ jobs:
           VITE_API_URL: https://service-api-3okw.onweeny.com
         run: npm run build
 
+      - name: Configure SPA fallback
+        working-directory: Front-end (React)
+        run: cp dist/index.html dist/404.html
+
       - name: Upload build
         uses: actions/upload-pages-artifact@v3
         with:
