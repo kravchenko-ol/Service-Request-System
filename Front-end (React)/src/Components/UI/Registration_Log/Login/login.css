@@ -65,6 +65,14 @@
     }
 }
 
+@media (max-width: 480px) {
+    .mainLog {
+        &.exit { animation: AnimLogRegRigth 3s ease-in-out; }
+        &.enter { animation: AnimLogRegRigthEnter 3s ease-in-out; }
+        form { gap: 0.25rem; }
+    }
+}
+
 @keyframes AnimLogRegRigth {
     from {
         opacity: 1;

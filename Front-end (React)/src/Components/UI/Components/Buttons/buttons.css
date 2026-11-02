@@ -47,3 +47,14 @@
         box-shadow: none;
     }
 }
+
+@media (max-width: 480px) {
+    .registrBtn {
+        padding: 0.25rem 2rem 0.25rem 2rem;
+        font-size: 1rem;
+        
+        &:active {
+            transform: scale(0.9);
+        }
+    }
+}

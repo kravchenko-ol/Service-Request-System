@@ -70,6 +70,108 @@
     background-repeat: no-repeat;
 }
 
+@media (min-width: 320px) and (max-width: 480px) {
+    .mainRegLog {
+        gap: 0.5rem;
+        .mainModal {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 20rem;
+            height: 32.5rem;
+            border: 0.25rem solid rgba(180, 0, 180, 0.672);
+            border-radius: 3rem;
+            box-shadow: 0.1rem 1rem 2rem rgb(0, 0, 0);
+            backdrop-filter: blur(5px);
+
+            .btnDiv {
+                width: 100%;
+                height: 15%;
+                padding: 1rem;
+                border-radius: 3rem;
+                background-image: none;
+
+                &.exit { animation: AnimLogRegCloseMobil 3s ease-in-out; }
+                &.enter { animation: AnimLogRegOpenMobil 3s ease-in-out; }
+            }
+
+            .btnDivReg {
+                background-image: none;
+                &.exit { animation: AnimLogRegCloseMobil 3s ease-in-out; }
+                &.enter {animation: AnimLogRegOpenMobil 3s ease-in-out; }
+            }
+        }
+    }
+
+    .mainRegOperator {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-image: url(/img/mountains-pink-sky-twilight-sunset-dusk-snow-covered-1920x1080-8263.jpeg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 760px) {
+    .mainRegLog {
+        .mainModal {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 30rem;
+            height: 35.5rem;
+            border: 0.25rem solid rgba(180, 0, 180, 0.672);
+            border-radius: 3rem;
+            box-shadow: 0.1rem 1rem 2rem rgb(0, 0, 0);
+            backdrop-filter: blur(5px);
+
+            .btnDiv {
+                width: 100%;
+                height: 15%;
+                padding: 1rem;
+                border-radius: 3rem;
+                background-image: none;
+
+                &.exit {
+                    animation: AnimLogRegCloseMobil 3s ease-in-out;
+                }
+
+                &.enter {
+                    animation: AnimLogRegOpenMobil 3s ease-in-out;
+                }
+            }
+
+            .btnDivReg {
+                background-image: none;
+
+                &.exit {
+                    animation: AnimLogRegCloseMobil 3s ease-in-out;
+                }
+
+                &.enter {
+                    animation: AnimLogRegOpenMobil 3s ease-in-out;
+                }
+            }
+        }
+    }
+
+    .mainRegOperator {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-image: url(/img/mountains-pink-sky-twilight-sunset-dusk-snow-covered-1920x1080-8263.jpeg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
 @keyframes AnimLogRegRigth {
     from {
         opacity: 1;
@@ -115,6 +217,34 @@
         opacity: 1;
         transform: 
             translateX(0)
+    }
+}
+
+@keyframes AnimLogRegOpenMobil {
+    from {
+        opacity: 0;
+        transform:
+            scale(0)
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            scale(1)
+    }
+}
+
+@keyframes AnimLogRegCloseMobil {
+    from {
+        opacity: 1;
+        transform:
+            scale(1)
+    }
+
+    to {
+        opacity: 0;
+        transform:
+            scale(0)
     }
 }
 

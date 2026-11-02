@@ -7,7 +7,9 @@ import { AnimContext } from '../../../Animation/animLogReg';
 export default function MainRegistrLog() {
     const navigate = useNavigate();
     const location = useLocation();
-    const [anim, setAnim] = useState<''|'exit'|'enter'>('');
+    const [anim, setAnim] = useState<'' | 'exit' | 'enter'>('');
+    const width = window.innerWidth;
+    
 
     function clickRegLog() {
         const loc = location.pathname === '/' ? '/registration' : '/';
@@ -35,7 +37,7 @@ export default function MainRegistrLog() {
                             location.pathname === '/' ? 
                                 <div className= 'mainModal'>
                                     <Outlet/>
-                                    <div className={` btnDiv btnDivReg ${anim}`} >
+                                    <div className={`btnDiv btnDivReg ${anim}`} >
                                         <LogRegistrBtn 
                                             text={'Registration'} 
                                             styleClass='registrBtn'
@@ -44,16 +46,28 @@ export default function MainRegistrLog() {
                                     </div>
                                 </div>
                                     :
-                                <div className= 'mainModal'>
-                                    <div className={`btnDiv ${anim}`}>
-                                        <LogRegistrBtn 
-                                            text={'Login'} 
-                                            styleClass='registrBtn'
-                                            click={clickRegLog}
-                                        />
-                                    </div>
+                                width >= 320 && width <= 760 ?
+                                    <div className='mainModal'>
                                         <Outlet/>
-                                </div>
+                                        <div className={`btnDiv ${anim}`}>
+                                            <LogRegistrBtn 
+                                                text={'Login'} 
+                                                styleClass='registrBtn'
+                                                click={clickRegLog}
+                                            />
+                                        </div>
+                                    </div>
+                                    :
+                                    <div className= 'mainModal'>
+                                        <div className={`btnDiv ${anim}`}>
+                                            <LogRegistrBtn 
+                                                text={'Login'} 
+                                                styleClass='registrBtn'
+                                                click={clickRegLog}
+                                            />
+                                        </div>
+                                            <Outlet/>
+                                    </div>
                         }
                     </div>
             }

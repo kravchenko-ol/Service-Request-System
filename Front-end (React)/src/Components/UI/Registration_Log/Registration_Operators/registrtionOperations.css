@@ -70,3 +70,17 @@
         }
     }
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .formDiv {
+        min-width: 15rem;
+        padding: 1.5rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 760px) {
+    .formDiv {
+        min-width: 30rem;
+        padding: 1.5rem;
+    }
+}
