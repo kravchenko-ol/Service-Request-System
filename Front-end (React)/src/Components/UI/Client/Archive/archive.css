@@ -17,3 +17,10 @@
         flex-direction: column;
     }
 }
+
+@media (max-width: 760px) {
+    .mainArchive {
+        display: flex;
+        flex-direction: column;
+    }
+}

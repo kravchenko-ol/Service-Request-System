@@ -11,7 +11,7 @@
     height: auto;
 }
 
-@media (min-width: 320px) and (max-width: 760px) {
+@media (min-width: 320px) and (max-width: 480px) {
     .mainClient {
         display: flex;
         flex-direction: column;

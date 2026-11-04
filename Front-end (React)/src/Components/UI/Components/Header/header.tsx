@@ -92,7 +92,7 @@ export default function Header () {
                                         <>
                                             <LeftMenu/>
                                             <div className='signLog'>
-                                                <NavLink to={'login'}>
+                                                <NavLink to={'/'}>
                                                     <LogRegistrBtn text='login' styleClass='logRegistBtn'/>
                                                 </NavLink>
 
