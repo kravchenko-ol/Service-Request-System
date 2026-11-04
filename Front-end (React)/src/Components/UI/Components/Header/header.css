@@ -166,7 +166,8 @@ header {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                background-color: var(--activeReq);
+                background-color: var(--background-modal-mobile);
+                backdrop-filter: blur(5px);
                 width: 32%;
                 gap: 0.5rem;
                 top: 5.5%;
