@@ -148,9 +148,8 @@ header {
                 img { width: 20px; }
             }
 
-            .search {width: 8rem; }
-
-            .rigthBlock {display: none; }
+            .search { width: 8rem; }
+            .rigthBlock { display: none; }
 
             .rigthBlockMobil {
                 display: flex;
@@ -168,10 +167,10 @@ header {
                 justify-content: center;
                 align-items: center;
                 background-color: var(--activeReq);
-                width: 28%;
+                width: 32%;
                 gap: 0.5rem;
-                top: 6.5%;
-                left: 71%;
+                top: 5.5%;
+                left: 67%;
                 padding: 1rem;
                 border-radius: 0.75rem;
                 z-index: 999;
@@ -213,7 +212,7 @@ header {
     }
 }
 
-@media (min-width: 480px) and (max-width: 760px) {
+@media (min-width: 481px) and (max-width: 760px) {
     header {
         nav {
             gap: none;
