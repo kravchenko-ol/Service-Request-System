@@ -62,7 +62,10 @@ export default function ShowRequest() {
                                             <div 
                                                 key={request.id} 
                                                 className={`request ${request.id === id ? 'active' : ''}`}
-                                                onClick={() => navigate(`/archive/${request.id}`)}
+                                                onClick={() => {
+                                                    navigate(`/archive/${request.id}`);
+                                                    setCloseMenu('close');
+                                                }}
                                             >
                                                 <div className='info'>
                                                     <div className='reqTitle'>

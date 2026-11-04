@@ -12,6 +12,7 @@
     --border-main: black;
     --background-modal: rgba(255, 255, 255, 0.44);
     --background-modal-mobile: rgba(9, 1, 97, 0.601);
+    --archivReq-background: rgba(215, 215, 215, 0.263);
 }
 
 .dark {
@@ -28,4 +29,5 @@
     --border-main: white;
     --background-modal: rgba(13, 13, 13, 0.44);
     --background-modal-mobile: rgba(0, 0, 0, 0.601);
+    --archivReq-background: rgba(3, 3, 3, 0.246);
 }
