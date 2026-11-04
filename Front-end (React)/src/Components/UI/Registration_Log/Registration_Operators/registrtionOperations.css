@@ -75,6 +75,14 @@
     .formDiv {
         min-width: 15rem;
         padding: 1.5rem;
+
+        form {
+            .inputDiv {
+                label {
+                    width: 55%;
+                }
+            }
+        }
     }
 }
 
@@ -82,5 +90,13 @@
     .formDiv {
         min-width: 30rem;
         padding: 1.5rem;
+
+        form {
+            .inputDiv {
+                label {
+                    width: 35%;
+                }
+            }
+        }
     }
 }

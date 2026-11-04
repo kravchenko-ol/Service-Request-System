@@ -185,13 +185,16 @@ export default function Acc () {
                                 <SubmitBtn text='Save'/>
                             </div>
                         </div>
-                        <BtnOnly text='Exite' click={() => {
+                        <BtnOnly
+                            text='Exite'
+                            click={() => {
                                     if (!session?.sess?.id) {
                                         setActiveSession(false);
                                         return;
                                     };
                                     exiteAcc();
-                                }}/>
+                            }}
+                        />
                     </form>
                 </div>
             </div>

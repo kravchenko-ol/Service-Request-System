@@ -23,6 +23,18 @@
     }
 }
 
+@media (min-width: 320px) and (max-width: 480px) {
+    .menu { display: none;}
+}
+
+@media (min-width: 481px) and (max-width: 760px) { 
+    .menu {
+        img {
+            width: 1.25rem;
+        }
+    }
+}
+
 .leftMenuOp {
     display: flex;
     flex-direction: column;
