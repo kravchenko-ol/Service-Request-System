@@ -1,6 +1,5 @@
 .mainDiv {
     display: grid;
-    justify-items: start;
     align-content: start;
     align-items: center;
     gap: 1rem;
@@ -209,6 +208,6 @@
 
 @media (max-width: 760px) {
     .mainDiv {
-        height: calc(100% - 2.5rem);
+        margin-top: 2.5rem;
     }
 }
