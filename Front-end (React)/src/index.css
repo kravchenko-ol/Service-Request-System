@@ -5,3 +5,9 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     overflow: hidden;
 }
+
+@media (max-width: 760px) {
+    * {
+        overflow: none;
+    }
+}
