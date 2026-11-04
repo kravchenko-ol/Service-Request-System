@@ -214,7 +214,7 @@
         height: 100%;
 
         .menu {
-            display: none;
+            display: block;
         }
 
         .divForm {
@@ -258,6 +258,12 @@
     }
 }
 
+@media (min-width: 481px) and (max-width: 760px) {
+    .menu {
+        display: block;
+    }
+}
+
 @media (min-width: 761px) and (max-width: 900px) {
     .mainCreate {
         .divForm {
@@ -268,12 +274,6 @@
                 }
             }
         }
-    }
-}
-
-@media (min-width: 481px) and (max-width: 760px) {
-    .menu {
-        display: block;
     }
 }
 
