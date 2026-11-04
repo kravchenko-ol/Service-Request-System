@@ -85,7 +85,9 @@ export default function Header () {
                                     >
                                     {
                                         session?.sess?.id ? 
-                                        <></> 
+                                        <>
+                                            <LeftMenu />
+                                        </> 
                                         :
                                         <>
                                             <LeftMenu/>
