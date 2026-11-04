@@ -108,7 +108,6 @@
         padding: 0;
 
         .formUser {
-
             form {
                 display: grid;
                 grid-template-columns: repeat(1, 1fr);
@@ -165,4 +164,8 @@
             }
         }
     }
+}
+
+@media (min-width: 481px) and (max-width: 760px) {
+    .menu { display: block;} 
 }
