@@ -68,9 +68,9 @@ header {
             flex-direction: column;
             justify-content: center;
             align-items: start;
-            top: 8%;
-            left: 24%;
-            width: 24rem;
+            top: 6.5%;
+            left: 30%;
+            width: 65%;
             color: var(--border-main);
             background: var( --activeReq);
             border: 1px solid var(--border-main);
@@ -96,7 +96,7 @@ header {
 
         .rigthBlock {
             display: flex;
-            justify-content: center;
+            justify-content: end;
             align-items: center;
             gap: 2.5rem;
             width: 15rem;
@@ -168,13 +168,15 @@ header {
                 justify-content: center;
                 align-items: center;
                 background-color: var(--activeReq);
-                width: 25%;
+                width: 28%;
                 gap: 0.5rem;
-                top: 7%;
-                left: 74%;
+                top: 6.5%;
+                left: 71%;
+                padding: 1rem;
                 border-radius: 0.75rem;
                 z-index: 999;
                 opacity: 0;
+                transform: translateY(-120%);
                 transition: 
                     opacity 0.5s ease, 
                     transform 0.5s ease, 
@@ -182,7 +184,7 @@ header {
                 
                 &.active {
                     opacity: 1;
-                    transform: scale(100%);
+                    transform: translateY(2%);
                     visibility: visible;
                 }
 
