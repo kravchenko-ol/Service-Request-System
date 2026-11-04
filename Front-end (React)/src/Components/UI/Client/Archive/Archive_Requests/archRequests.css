@@ -206,3 +206,9 @@
         }
     }
 }
+
+@media (max-width: 760px) {
+    .mainDiv {
+        height: calc(100% - 2.5rem);
+    }
+}
