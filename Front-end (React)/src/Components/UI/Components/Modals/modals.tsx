@@ -12,7 +12,7 @@ export function ModalNotLog({className} : {className: string}) {
             <div className={`notLog ${className}`}>
                 <div className='notLogInfo'>
                     <h3>To continue, please</h3>
-                    <NavLink to={'/login'} className={'a'}>
+                    <NavLink to={'/'} className={'a'}>
                         <button type='button' className='navBut'>
                             Log in
                         </button>

@@ -40,7 +40,7 @@ export function LeftMenu() {
                             )}
                     />
 
-                    <NavLink to={'acc'} 
+                    <NavLink to={'acc'} className={"accNav"} 
                             children={({ isActive }) => (
                                 <>
                                     <img src={

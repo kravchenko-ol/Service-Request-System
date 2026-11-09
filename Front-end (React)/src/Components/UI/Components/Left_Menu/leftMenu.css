@@ -24,7 +24,13 @@
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-    .menu { display: none;}
+    .menu { 
+        display: none;
+
+        .accNav {
+            display: none;
+        }
+    }
 }
 
 @media (min-width: 481px) and (max-width: 760px) { 
