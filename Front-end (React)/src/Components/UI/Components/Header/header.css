@@ -68,10 +68,10 @@ header {
             flex-direction: column;
             justify-content: center;
             align-items: start;
-            top: 6.5%;
-            left: 30%;
+            top: 11.5%;
+            left: 25%;
             width: 65%;
-            color: var(--border-main);
+            color: white;
             background: var( --activeReq);
             border: 1px solid var(--border-main);
             border-radius: 0 0 0.5rem 0.5rem;
@@ -150,6 +150,9 @@ header {
 
             .search { width: 8rem; }
             .rigthBlock { display: none; }
+            .resultSearch {
+                top: 5.25%;
+            }
 
             .rigthBlockMobil {
                 display: flex;

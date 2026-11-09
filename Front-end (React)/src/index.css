@@ -6,8 +6,8 @@
     overflow: hidden;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 916px) {
     * {
-        overflow: none;
+        overflow-y: scroll;
     }
 }
