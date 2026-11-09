@@ -51,6 +51,7 @@
                 display: flex;
                 justify-content: end;
                 align-items: center;
+                width: 100%;
                 gap: 0.5rem;
 
                 .statusText {
@@ -75,6 +76,7 @@
                 justify-content: end;
                 align-items: center;
                 gap: 0.5rem;
+                width: 100%;
                 padding: 0.25rem;
 
                 img {
