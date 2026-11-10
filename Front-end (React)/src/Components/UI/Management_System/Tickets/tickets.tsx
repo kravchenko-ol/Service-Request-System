@@ -297,12 +297,12 @@ export default function Tickets() {
                                                                         <span>·</span>
                                                                     </div>
                                                                     <div className='reqUser'>
-                                                                        <img src={`${import.meta.env.BASE_URL}/public/img/user.png`} alt="" width={12}/>
+                                                                        <img src={`${import.meta.env.BASE_URL}/img/user.png`} alt="" width={12}/>
                                                                         <p>{request.author.name}</p>
                                                                     </div>
 
                                                                     <div className='iconMore'>
-                                                                        <img src={`${import.meta.env.BASE_URL}/public/img/more.png`} alt="" width={16}/>
+                                                                        <img src={`${import.meta.env.BASE_URL}/img/more.png`} alt="" width={16}/>
 
                                                                         <div className='divMore'>
                                                                             <div 
