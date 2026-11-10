@@ -115,8 +115,11 @@ export default function Tickets() {
 
     function openModal(): boolean {
         setCreateTick(prev => !prev);
-        setMoreRequest({ onModal: false, idReq: '' });
         return createTick
+    };
+
+    function openModalReq() {
+        setMoreRequest({ onModal: false, idReq: '' });
     };
 
     return (
@@ -347,8 +350,22 @@ export default function Tickets() {
                     })
                 }
             </div>
-            { <ModalCeateTicket open={createTick} onCreate={createTicket} onClose={openModal} /> }
-            { moreRequest.onModal === true && <ModalMoreRequest data={request} onClose={openModal} refetchReq={refetchReq} refetchTick={refetchTicket} /> }
+            {
+                <ModalCeateTicket
+                    open={createTick}
+                    onCreate={createTicket}
+                    onClose={openModal}
+                />
+            }
+            {
+                <ModalMoreRequest
+                    moreOpen={moreRequest.onModal}
+                    data={request}
+                    onClose={openModalReq}
+                    refetchReq={refetchReq}
+                    refetchTick={refetchTicket} 
+                /> 
+            }
         </div>
     )
 }

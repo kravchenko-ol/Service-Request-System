@@ -50,8 +50,9 @@ export function ModalCeateTicket({open, onCreate, onClose}: {open: boolean ,onCr
     )
 };
 
-export function ModalMoreRequest({ data, onClose, refetchReq, refetchTick }
+export function ModalMoreRequest({moreOpen, data, onClose, refetchReq, refetchTick }
     : {
+        moreOpen: boolean,
         data: IGetRequestData | null,
         onClose: () => void,
         refetchReq: () => Promise<void>,
@@ -59,10 +60,8 @@ export function ModalMoreRequest({ data, onClose, refetchReq, refetchTick }
     }) {
     const session = useContext(OperatorSessionContext);
     const [comment, setComment] = useState<string>('');
-    const [close, setClose] = useState<boolean>(false);
 
     const [stat, setStat] = useState<TStatus | undefined>();
-
 
     async function sendComment() {
         if (!comment || !stat) return;
@@ -110,14 +109,13 @@ export function ModalMoreRequest({ data, onClose, refetchReq, refetchTick }
     };
 
     return ( 
-        <div className={`ModalMoreRequestBack ${close && 'close'}`}>
+        <div className={`ModalMoreRequestBack closeModalReq ${moreOpen && 'openModalReq'}`}>
             <div className='menuModalMoreRequest'>
-                <div className='blockExit'>
-                    <img
-                        onClick={() => { onClose();  setClose(true)}}
-                        src={`${import.meta.env.BASE_URL}/img/delete.png}`}
-                        alt="close" width={25}
-                    />
+                <div
+                    className='blockExit'
+                    onClick={onClose}
+                >
+                    <img src={`${import.meta.env.BASE_URL}/img/delete.png`} alt="close" width={25}/>
                 </div>
                 <div className='mainModalMoreRequest'>
                     {
