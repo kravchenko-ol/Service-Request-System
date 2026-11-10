@@ -24,3 +24,10 @@
         flex-direction: column;
     }
 }
+
+@media (min-width: 915px) {
+    .mainArchive {
+        height: 100%;
+        overflow-y: auto;
+    }
+}

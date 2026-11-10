@@ -5,9 +5,3 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     overflow: hidden;
 }
-
-@media (min-width: 915px) {
-    body {
-        overflow-y: scroll;
-    }
-}
