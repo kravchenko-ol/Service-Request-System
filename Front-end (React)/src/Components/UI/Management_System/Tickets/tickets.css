@@ -88,18 +88,18 @@
         align-items: start;
         gap: 1rem;
         left: 70rem;
-        top: 6.5rem;
+        top: 7rem;
         width: 25rem;
         padding: 0.5rem;
-        opacity: 1;
         backdrop-filter: blur(5px);
         border: 1px solid rgba(0, 0, 0, 0.328);
         border-radius: 0.5rem;
         box-shadow: 0.25rem 0.5rem 0.5rem rgba(8, 8, 8, 0.467);
         z-index: 999;
-        transition: animation 0.5s ease-in-out;
+        transition: opacity 0.5s ease-in-out;
 
-        &.open { animation: animOpen 0.5s ease-in-out }
+        &.open { opacity: 1 }
+        &.close { opacity: 0 }
 
         .filtrblock {
             display: flex;
@@ -383,13 +383,6 @@
     }
 }
 
-@keyframes animOpen {
-    from {
-        opacity: 0;
-    } to {
-        opacity: 1;
-    }
-}
 
 @keyframes animeCreate {
     from {
@@ -399,7 +392,6 @@
         opacity: 1;
         transform: scale(1);
     }
-
 }
 
 @keyframes animeDelete {
@@ -410,4 +402,22 @@
         opacity: 0;
         transform: scale(0);
     }
+}
+
+@media (max-width: 760px) {
+    .main {
+        .mainTickets {
+            flex-direction: column;
+            gap: 0.5rem;
+            overflow-y: auto;
+        }
+
+        .filterModal {
+            width: 15rem;
+            left: 10rem;
+            top: 10rem;
+            font-size: 0.7rem;
+        }
+    }
+    
 }

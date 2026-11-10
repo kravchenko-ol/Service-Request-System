@@ -55,7 +55,10 @@
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.231);
     z-index: 999;
-    animation: anim 0.3s ease-in-out;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+
+    &.closeModal { opacity: 0; transform: scale(0); }
+    &.openModal { opacity: 1; transform: scale(1);}
 
     .createTick {
         display: flex;
@@ -78,7 +81,7 @@
             gap: 7rem;
             width: 100%;
 
-            .closeModal {
+            .closeModalBtn {
                 border: none;
                 background: none;
                 cursor: pointer;

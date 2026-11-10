@@ -23,17 +23,17 @@ export function ModalNotLog({className} : {className: string}) {
     )
 };
 
-export function ModalCeateTicket({onCreate, onClose}: {onCreate: (name: string) => void, onClose: () => void}) {
+export function ModalCeateTicket({open, onCreate, onClose}: {open: boolean ,onCreate: (name: string) => void, onClose: () => void}) {
     const [name, setName] = useState('');
 
     return (
-        <div className='createModal'>
+        <div className={`createModal closeModal ${open && 'openModal'}`}>
             <div className='createTick'>
                 <div className='modalCreateHead'>
                     <h4>Create Ticket</h4>
                     <button 
                         type='button' 
-                        className='closeModal'
+                        className={`closeModalBtn`}
                         onClick={onClose}
                     >
                         <img src={`${import.meta.env.BASE_URL}/img/delete.png`} alt="" width={24}/>

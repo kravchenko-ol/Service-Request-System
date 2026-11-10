@@ -113,9 +113,10 @@ export default function Tickets() {
         }
     };
 
-    function closeModal() {
-        setCreateTick(false);
+    function openModal(): boolean {
+        setCreateTick(prev => !prev);
         setMoreRequest({ onModal: false, idReq: '' });
+        return createTick
     };
 
     return (
@@ -153,77 +154,72 @@ export default function Tickets() {
                         src={`${import.meta.env.BASE_URL}/img/filtration.png` }
                         alt="" 
                         width={16}
-                        onClick={() => setFilter(true)}
+                        onClick={() => {setFilter(prev => !prev)}}
                     />
                     <p>Filters</p>
                 </div>
             </div>
 
             {
-                onFilter && (
-                    <div 
-                        className={`filterModal ${onFilter && 'open'}`} 
-                        onMouseLeave={() => setFilter(false)}
-                    >
-                        <div className='filterName filtrblock'>
-                            <p>Name:</p>
-                            <ul>
-                                {
-                                    tickets?.map(ticket => 
-                                        <li key={ticket.id} 
-                                            className={filterName === ticket.name ? 'activeName' : ''}
-                                            onClick={() => {
-                                                setFilterName(ticket.name);
-                                                setFilterPrior('');
-                                                setFilterCategory('');
-                                            }} 
-                                        >
-                                            {ticket.name}
-                                        </li>
-                                    )
-                                }
-                            </ul>
-                        </div>
-                        <div className='filterPrior filtrblock'>
-                            <p>Priority:</p>
-                            <ul>
-                                {
-                                    valuePrioritys.map(value => 
-                                    <li 
-                                        key={value}
-                                        className={filterPrior === value ? 'activePrior' : ''}
+                <div className={`filterModal ${onFilter ? 'open' : 'close'}`} >
+                    <div className='filterName filtrblock'>
+                        <p>Name:</p>
+                        <ul>
+                            {
+                                tickets?.map(ticket => 
+                                    <li key={ticket.id} 
+                                        className={filterName === ticket.name ? 'activeName' : ''}
                                         onClick={() => {
-                                            setFilterPrior(value);
-                                            setFilterName('');
-                                            setFilterCategory('');
-                                        }}
-                                    >
-                                        {value}
-                                    </li>)
-                                }
-                            </ul>
-                        </div>
-                        <div className='filterCategory filtrblock'>
-                            <p>Category:</p>
-                            <ul>
-                                {
-                                    valuecategorys.map(value => 
-                                    <li 
-                                        key={value}
-                                        className={filterCategory === value ? 'activeCategory' : ''}
-                                        onClick={() => {
-                                            setFilterCategory(value);
+                                            setFilterName(ticket.name);
                                             setFilterPrior('');
-                                            setFilterName('');
-                                        }}
+                                            setFilterCategory('');
+                                        }} 
                                     >
-                                        {value}
-                                    </li>)
-                                }
-                            </ul>
-                        </div>
+                                        {ticket.name}
+                                    </li>
+                                )
+                            }
+                        </ul>
                     </div>
-                )
+                    <div className='filterPrior filtrblock'>
+                        <p>Priority:</p>
+                        <ul>
+                            {
+                                valuePrioritys.map(value => 
+                                <li 
+                                    key={value}
+                                    className={filterPrior === value ? 'activePrior' : ''}
+                                    onClick={() => {
+                                        setFilterPrior(value);
+                                        setFilterName('');
+                                        setFilterCategory('');
+                                    }}
+                                >
+                                    {value}
+                                </li>)
+                            }
+                        </ul>
+                    </div>
+                    <div className='filterCategory filtrblock'>
+                        <p>Category:</p>
+                        <ul>
+                            {
+                                valuecategorys.map(value => 
+                                <li 
+                                    key={value}
+                                    className={filterCategory === value ? 'activeCategory' : ''}
+                                    onClick={() => {
+                                        setFilterCategory(value);
+                                        setFilterPrior('');
+                                        setFilterName('');
+                                    }}
+                                >
+                                    {value}
+                                </li>)
+                            }
+                        </ul>
+                    </div>
+                </div>
             }
 
             <div className='mainTickets'>
@@ -351,8 +347,8 @@ export default function Tickets() {
                     })
                 }
             </div>
-            { createTick === true && <ModalCeateTicket onCreate={createTicket} onClose={closeModal} /> }
-            { moreRequest.onModal === true && <ModalMoreRequest data={request} onClose={closeModal} refetchReq={refetchReq} refetchTick={refetchTicket} /> }
+            { <ModalCeateTicket open={createTick} onCreate={createTicket} onClose={openModal} /> }
+            { moreRequest.onModal === true && <ModalMoreRequest data={request} onClose={openModal} refetchReq={refetchReq} refetchTick={refetchTicket} /> }
         </div>
     )
 }

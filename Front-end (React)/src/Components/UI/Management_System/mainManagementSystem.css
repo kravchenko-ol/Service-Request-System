@@ -5,3 +5,9 @@
     min-height: 100vh;
     background-color: whitesmoke;
 }
+
+@media (max-width: 760px) {
+    .mainManag {
+        flex-direction: column;
+    }
+}

@@ -20,6 +20,7 @@
         backdrop-filter: blur(10px);
         background-color: rgba(255, 235, 205, 0.495);
         box-shadow: 0rem 0rem 0.5rem rgba(8, 8, 8, 0.467);
+        overflow-x: auto;
 
         .stat {
             display: flex;
