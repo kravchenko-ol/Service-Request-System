@@ -96,10 +96,10 @@
         border-radius: 0.5rem;
         box-shadow: 0.25rem 0.5rem 0.5rem rgba(8, 8, 8, 0.467);
         z-index: 999;
-        transition: opacity 0.5s ease-in-out;
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 
-        &.open { opacity: 1 }
-        &.close { opacity: 0 }
+        &.open { opacity: 1; transform: scale(1); }
+        &.close { opacity: 0; transform: scale(0);}
 
         .filtrblock {
             display: flex;
@@ -287,6 +287,8 @@
                             margin-left: auto;
                             cursor: pointer;
 
+                            img { width: 24px;}
+
                             .divMore {
                                 position: absolute;
                                 display: none;
@@ -408,8 +410,11 @@
     .main {
         .mainTickets {
             flex-direction: column;
+            align-items: center;
             gap: 0.5rem;
+            height: 100vh;
             overflow-y: auto;
+            scrollbar-width: none;
         }
 
         .filterModal {
