@@ -62,7 +62,11 @@ export default function ArchRequests() {
                 <div className='descrReq'>
                     <div className='imgDiv'>
                         <img 
-                            src={session?.sess?.sex === 'men' ? `${import.meta.env.BASE_URL}/img/free-icon-user-219970.png` : `${import.meta.env.BASE_URL}/img/free-icon-user-219971.png`} 
+                            src={
+                                session?.sess?.sex === 'men' ?
+                                    `${import.meta.env.BASE_URL}/img/free-icon-user-219971.png` :
+                                    `${import.meta.env.BASE_URL}/img/free-icon-user-219970.png`
+                                }
                             alt="" 
                             width={24} 
                         />
